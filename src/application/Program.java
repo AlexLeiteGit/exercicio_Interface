@@ -45,7 +45,6 @@ public class Program {
 		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
 		
 		rentalService.processInvoice(carRental);
-		
 		System.out.println("INVOICE:");
 		System.out.println("Basic payment: " + String.format("%.2f", carRental.getInvoice().getBasicPayment()));
 		System.out.println("Tax: " + String.format("%.2f", carRental.getInvoice().getTax()));
